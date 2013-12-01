@@ -1,4 +1,6 @@
 #include <iostream>
+//#include <cstdio>
+#define BUFSIZ 256
 
 using namespace std;
 
@@ -23,7 +25,7 @@ int main()
      bool nocheinmal = false, mehrBits = false, eingabeOk;
 
      do{//! Abfrage Programm beenden?
-     int bitcount = 0;
+     unsigned int bitcount = 0;
         do{//! eingabe OK
             initBuffer(dualsplit,laenge);
             eingabeOk = true;
@@ -120,13 +122,13 @@ void printEingabe(unsigned long dualsplit[],unsigned int laenge){
 
 void berechneErgebniss(unsigned long dualsplit[],int laenge){
     unsigned long dezi = 0;
-    for (unsigned int i=0;i<laenge;i++){
+    for ( int i=0;i<laenge;i++){
         unsigned long dezistelle = 1;
         if(i == 0){
             dezistelle = 1;
         }
         else{
-            unsigned int z = laenge-i;
+             int z = laenge-i;
             while(z < laenge){
                 dezistelle = 2*dezistelle;
                 z++;
