@@ -119,13 +119,13 @@ void printEingabe(unsigned int dualzahl[],unsigned int laenge){
 
 unsigned long berechneErgebniss(unsigned int dualzahl[],unsigned int laenge){
     unsigned long dezi = 0;
-    for ( int i=0;i<laenge;i++){
+    for ( unsigned int i=0;i<laenge;i++){
         unsigned long dezistelle = 1;
         if(i == 0){
             dezistelle = 1;
         }
         else{
-             int z = laenge-i;
+             unsigned int z = laenge-i;
             while(z < laenge){
                 dezistelle = 2*dezistelle;
                 z++;
