@@ -1,8 +1,13 @@
 #include <iostream>
-//#include <cstdio>
-#define BUFSIZ 256
+#include <cstdio>
+/*
+Programm zum Umrechnen von Dualzahlen
+nach Dezimalzahlen
+*/
 
 using namespace std;
+
+const string text = "Ein Konsoleprogramm zum Umrechnen von Dualzahlen nach Dezimalzahlen";
 
 //! wieviel bit unterstützt das System
 unsigned int berechneStellen();
@@ -21,12 +26,12 @@ void printErgebnis(unsigned long dezi);
 
 int main()
 {
-     unsigned int laenge = berechneStellen();
-     unsigned int dualzahl[laenge];
-     bool nocheinmal = false, mehrBits = false, eingabeOk;
+    unsigned int laenge = berechneStellen();
+    unsigned int dualzahl[laenge];
+    bool nocheinmal = false, mehrBits = false, eingabeOk;
+    cout << text << endl << endl;
 
-
-     do{//! Noch ein Programmdurchlauf?
+    do{//! Noch ein Programmdurchlauf?
         unsigned int bitcount = 0;
         initBuffer(dualzahl,laenge);
         do{//! eingabe OK
